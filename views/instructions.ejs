@@ -1,0 +1,17 @@
+<%- include("partials/head.ejs") %>
+<body>
+    <%- include("partials/navbar.ejs") %>
+    <div class="container-fluid">
+        <% if (locals) {%>
+            <h1 class="display-3"><%= name %></h1>
+            <h1 class="display-6">Analysed Instructions:</h1>
+            <ul>
+                <% analysedSteps.forEach(function(step) { %>
+                    <li><%= step %></li>
+                <% }) %>
+            </ul>
+        <% } %>
+    </div>
+    <%- include("partials/footer.ejs") %>
+</body>
+</html>
